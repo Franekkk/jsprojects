@@ -10,16 +10,24 @@ const showBill = () => {
 
     if (price.value == '' || tip.value == 0) {
         error.textContent = 'Uzupełnij wszsystkie pola'
+        costInfo.style.display = "none"
     } else {
+        error.textContent = ''
         countBill()
     }
 }
 const countBill = () => {
-    const newPrice = price.value;
-    const newPeople = people.value;
-    const newTip = tip.value;
+    const newPrice = parseFloat(price.value);
+    const newPeople = parseInt(people.value);
+    const newTip = parseFloat(tip.value);
 
-    const cun = (newPrice + (newPrice + newTip))
+    const sum = (newPrice + (newPrice * newTip)) / newPeople
+    costInfo.style.display = ('block')
+
+
+    cost.textContent = sum.toFixed(2)
+
 }
+
 
 countBtn.addEventListener('click', showBill)
