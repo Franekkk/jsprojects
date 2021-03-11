@@ -8,5 +8,9 @@ const popup = document.querySelector('.popup')
 
 
 clearBtn.addEventListener('click', e => {
+    e.preventDefault();
 
+    [username, pass, pass2, email].forEach(el => {
+        el.value = '';
+    })
 })
