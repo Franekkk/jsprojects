@@ -6,6 +6,20 @@ const sendBTn = document.querySelector('.send')
 const clearBtn = document.querySelector('.clear')
 const popup = document.querySelector('.popup')
 
+const check = input => {
+    input.forEach(el => {
+        if (el.value === '') {
+            console.log(ok)
+        } else {
+            console.log(error)
+        }
+    })
+}
+sendBTn.addEventListener('click', e => {
+    e.preventDefault()
+
+    checkForm([username, pass,.pass2, email])
+})
 
 clearBtn.addEventListener('click', e => {
     e.preventDefault();
