@@ -25,8 +25,20 @@ const checkForm = input => {
         }
     })
 }
+const checkLength = (input, min) => {
+    const val = input.value.length;
+    if (val < min) {
+        showError(input, `${input.previousElementSibling.innerText}cos sklada sie z min ${min} znakow`)
+    }
+}
 
+sendBTn.addEventListener('click', e => {
+    e.preventDefault()
+    checkForm([username, password, password2, email])
+    checkLength(username, 3)
+    checkLength(password, 8)
 
+})
 
 const check = input => {
     input.forEach(el => {
@@ -37,11 +49,7 @@ const check = input => {
         }
     })
 }
-sendBTn.addEventListener('click', e => {
-    e.preventDefault()
 
-    checkForm([username, pass, pass2, email])
-})
 
 clearBtn.addEventListener('click', e => {
     e.preventDefault();

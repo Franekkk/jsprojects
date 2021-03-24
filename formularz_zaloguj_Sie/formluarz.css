@@ -44,7 +44,7 @@ h1{
 }
 .form-box.error input{
     border: 1px solid rgb(0,137,250);
-    background-color:rgba(0,137,250,.1) ;
+    background-color:rgba(240, 36, 9, 0.1) ;
 }
 .form-box .error-text{
     margin: 5px 0 0 10px;
