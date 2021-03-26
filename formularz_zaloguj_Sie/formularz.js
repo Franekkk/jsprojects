@@ -27,8 +27,14 @@ const checkForm = input => {
 }
 const checkLength = (input, min) => {
     const val = input.value.length;
-    if (val < min) {
-        showError(input, `${input.previousElementSibling.innerText}cos sklada sie z min ${min} znakow`)
+    if (input.value.length < min) {
+        showError(input, `${input.previousElementSibling.innerText.slice(0, -1)}cos sklada sie z min ${min} znakow`)
+    }
+}
+
+const checkPassword = (pass1, pass2) => {
+    if (pass1 !== pass2.value) {
+        showError(pass2, 'hasła do siebie nie passuja')
     }
 }
 
@@ -37,6 +43,7 @@ sendBTn.addEventListener('click', e => {
     checkForm([username, password, password2, email])
     checkLength(username, 3)
     checkLength(password, 8)
+    checkPassword(pass, pass2)
 
 })
 
