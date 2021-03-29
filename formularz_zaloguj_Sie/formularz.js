@@ -37,13 +37,23 @@ const checkPassword = (pass1, pass2) => {
         showError(pass2, 'hasła do siebie nie passuja')
     }
 }
+const checkMail = email => {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (re.test(email.value)) {
+        clearError(email)
+    } else {
+        showError(email, 'E-mail jest nie pooprawny')
+    }
+
+}
 
 sendBTn.addEventListener('click', e => {
     e.preventDefault()
     checkForm([username, password, password2, email])
     checkLength(username, 3)
     checkLength(password, 8)
-    checkPassword(pass, pass2)
+    checkPassword(pass1, pass2)
+    checkMail(email)
 
 })
 
