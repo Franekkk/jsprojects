@@ -2,7 +2,7 @@ const startBtn = document.querySelector('.start')
 const pauseBtn = document.querySelector('.pause')
 const resetBtn = document.querySelector('.reset')
 const stopBtn = document.querySelector('.stop')
-const histryBtn = document.querySelector('.histry')
+const historyBtn = document.querySelector('.history')
 const stopwatch = document.querySelector('.stopwatch')
 const time = document.querySelector('.time')
 const timeList = document.querySelector('.time-list')
@@ -34,7 +34,7 @@ const handleStart = () => {
 
 
 
-    }, 10);
+    }, 0, 1);
 }
 
 const handleStop = () => {
@@ -42,21 +42,41 @@ const handleStop = () => {
     if (stopwatch.textContent !== '0: 00') {
         time.style.visibility = 'visible'
         timeArr.push(stopwatch.textContent)
-        console.log(timeArr)
     }
 
 
+    clearStuff()
+}
+
+const handlePause = () => {
+    clearInterval(countTime)
+}
+const handleReset = () => {
+    time.style.visibility = 'hidden';
+    timeArr = [];
+    clearStuff();
+}
+const clearStuff = () => {
     clearInterval(countTime)
     stopwatch.textContent = '0:00'
     timeList.textContent = ''
     seconds = 0;
     minutes = 0;
 }
+const showHistory = () => {
+    timeList.textContent = ''
+    let num = 1;
+    timeArr.forEach(time => {
+        const newTime = document.createElement('li')
+        newTime.innerHTML = `pomian nr ${num} : <span>${time}</span>`
 
-const handlePause = () => {
-    clearInterval(countTime)
+        timeList.appendChild(newTime)
+        num++;
+    })
 }
 
 startBtn.addEventListener('click', handleStart)
 pauseBtn.addEventListener('click', handlePause)
 stopBtn.addEventListener('click', handleStop)
+resetBtn.addEventListener('click', handleReset)
+historyBtn.addEventListener('click', showHistory)
