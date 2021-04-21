@@ -3,39 +3,39 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>stoper</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@100&display=swap"
+    <title>Stoper & modal</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Montserrat:400,700&display=swap&subset=latin-ext"
         rel="stylesheet">
+
     <link rel="stylesheet" href="stoper.css">
-
-    <script src="https://kit.fontawesome.com/8a25a8b280.js" crossorigin="anonymous"> </script>
-
+    <script src="https://kit.fontawesome.com/8a25a8b280.js" crossorigin="anonymous"></script>
 </head>
 
-
-
-
-
-
 <body>
+
     <div class="wrapper">
-        <p class="info">
+        <div class="info">
             <i class="fas fa-question"></i>
-        </p>
+            <i class="fas fa-paint-brush"></i>
+        </div>
+        <div class="colors">
+            <div class="color one"></div>
+            <div class="color two"></div>
+            <div class="color three"></div>
+        </div>
         <h1>Stoper</h1>
         <p class="stopwatch">0:00</p>
         <p class="time">0:00</p>
         <div class="buttons">
             <button class="start"><i class="fas fa-play"></i></button>
-            <button class="pause "><i class="fas fa-pause"></i></button>
-            <button class="stop "><i class="fas fa-stop"></i></button>
+            <button class="pause"><i class="fas fa-pause"></i></button>
+            <button class="stop"><i class="fas fa-stop"></i></button>
             <button class="reset"><i class="fas fa-times"></i></button>
             <button class="history">archiwum</button>
         </div>
-        <ul class="time-list">
-        </ul>
+        <ul class="time-list"></ul>
     </div>
 
     <div class="modal-shadow">
@@ -44,14 +44,13 @@
             <p><i class="fas fa-play"></i> - start</p>
             <p><i class="fas fa-pause"></i> - pauza</p>
             <p><i class="fas fa-stop"></i> - stop</p>
-            <p><i class="fas fa-times"></i> - skasuj wszystko (łącznie z archiwum)</p>
-            <p><strong>archiwum</strong> - zobacz wcześniejsze pomiary</p>
+            <p><i class="fas fa-times"></i> - skasuj wszystko (Ĺ‚Ä…cznie z archiwum)</p>
+            <p><strong>archiwum</strong> - zobacz wczeĹ›niejsze pomiary</p>
             <button class="close">Zamknij</button>
         </div>
     </div>
 
     <script src="stoper.js"></script>
-    <script src="dodatkowe.js"></script>
 </body>
 
 </html>
