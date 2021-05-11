@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extange rate app </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,700&display=swap&subset=latin-ext"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="extangerate.css">
+    <script src="https://kit.fontawesome.com/8a25a8b280.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Exchange rate app </h1>
+        <p>sprawdź aktualne kursy walut</p>
+        <div class="app-body">
+
+            <div class="secction-left">
+                <input type="number" class="amount-one" value="1">
+                <select id="currency-one">
+                    <option value="PLN" selected>PLN</option>
+                    <option value="USD">USD</option>
+                    <option value="GPB"> GPB</option>
+                    <option value="EUR">EUR</option>
+                    <option value="CHF">CHF</option>
+                </select>
+
+            </div>
+            <button class="swap">
+                <i class="fas fa-retweet"></i>
+            </button>
+            <div class="secction-right">
+                <input type="number" class="amount-two">
+                <select id="currency-two">
+                    <option value="PLN">PLN</option>
+                    <option value="USD" selected>USD</option>
+                    <option value="GPB"> GPB</option>
+                    <option value="EUR">EUR</option>
+                    <option value="CHF">CHF</option>
+                </select>
+
+            </div>
+        </div>
+        <p class="rate info"></p>
+    </div>
+
+
+
+
+    <script src="extangerateapp.js"></script>
+</body>
+
+</html>
