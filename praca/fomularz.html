@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>formularz</title>
+    <link rel="stylesheet" href="formularz.css" />
+  </head>
+
+  <body>
+    <form>
+      <div>
+        <label class="my-third">Imię i nazwisko <sup>*</sup> </label>
+        <input type="text" name="imie" />
+      </div>
+
+      <div>
+        <label class="my-second">E-mail <sup>*</sup></label>
+        <input type="text" name="email" />
+      </div>
+
+      <div>
+        <label class="my-four">
+          Sygnatura sprawy lub nr PESEL/NIP <sup>*</sup>
+        </label>
+        <input type="text" name="sugnatura" />
+      </div>
+      <div>
+        <label>Treść wiadomości <sup>*</sup></label>
+        <textarea
+          class="my-class"
+          rows="5"
+          columns="500"
+          name="message"
+        ></textarea>
+      </div>
+      <button type="submit">Wyślij</button>
+    </form>
+  </body>
+</html>
