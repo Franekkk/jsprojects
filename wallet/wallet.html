@@ -69,10 +69,57 @@
         </div>
       </section>
       <section class="options">
-        <div></div>
+        <div>
+          <h2 class="title">Dostępne środki</h2>
+          <p class="avible-money">0zł</p>
+        </div>
+
+        <div class="controls"></div>
+        <button class="add-transatcion">
+          <i class="fas fa-plus"></i> Dodaj transakcję
+        </button>
+        <button class="delete-all">
+          <i class="far fa-trash-alt"></i> Usuń wszystko
+        </button>
+
+        <div class="style-selection">
+          <h2 class="title">Wybierz style</h2>
+          <div class="color-buttons">
+            <button class="light"></button>
+            <button class="dark"></button>
+          </div>
+        </div>
       </section>
     </main>
+    <div class="add-transatcion-panel">
+      <h2 class="title">Dodaj nową transakcje</h2>
+      <label for="name">nazwa</label>
+      <small>(podaj nazwe transakcji)</small>
+      <input type="text" id="name" />
 
+      <label for="amount">Kwota </label>
+      <small
+        >(podaj kwote transakcji jeżeli dodajesz wydatek postaw znak minusa na
+        początku kwoty)
+      </small>
+      <input type="number" id="amount" />
+
+      <label for="category">Wybierz kategorię</label>
+      <small> { + } oznacza przychód a { - } wydatek</small>
+      <select id="category">
+        <option value="none" selected disabled></option>
+        <option value="income">{ + }Przychód</option>
+        <option value=" shoping">{ - }Zakupy</option>
+        <option value=" food">{ - }Jedznie</option>
+        <option value=" cinema">{ - }kino</option>
+      </select>
+      <div class="panel-buttons">
+        <button class="save"><i class="fas fa-save"></i> Zapisz</button>
+        <button class="cancel">
+          <i class="far fa-window-close"></i>Anuluj
+        </button>
+      </div>
+    </div>
     <script src="wallet.js"></script>
   </body>
 </html>
